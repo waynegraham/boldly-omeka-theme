@@ -7,28 +7,36 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title><?php settings('site_title'); ?></title>
+  <title><?php echo settings('site_title'); echo $title ? ' | ' . $title : ''; ?></title>
   <meta name="description" content="<?php echo settings('description'); ?>" />
   <meta name="author" content="<?php echo settings('site_author'); ?>" />
-  <meta name="generator" content="" />
+  <meta name="generator" content="Omeka <?php echo OMEKA_VERSION ?>" />
   <link rel="shortcut icon" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <?php 
   echo auto_discovery_link_tag();
   plugin_header(); 
   
-  queue_css('style');
+  queue_css(array('style', 'ddsmoothmenu', 'nivo-slider', 'prettyPhoto'));
 
   display_css();
+
+  queue_js(array('cufon-yui', 'custom', 'ddsmoothmenu', 'jquery-1.4.2.min', 'jquery.form', 'jquery.nivo.slider.pack', 'jquery.prettyPhoto', 'Museo_Slab_500_400.font'));
+
   display_js();
+
+
 ?>  
 </head>
 <body id="home">
-    <div id="wrapper">
+    <div id="mainWrapper">
+      <div id="wrapper">
         <div id="header">
-            <div id="logo"><a href=""><img src="" /></a></div>
+            <div id="logo">
+                <?php echo link_to_home_page(custom_display_logo()); ?>
+            </div>
             <div id="mainMenu" class="ddsmoothmenu">
-                <ul id="menu-topmenu>
+                <ul id="menu-topmenu">
                     <li><a href="/">Home</a></li>
                     <li><a href="about">About</a></li>
                     <li><a href="items">Items</a></li>
@@ -46,17 +54,17 @@
                 <ul>
                     <li>
                         <a href="http://twitter.com/scholarslab" class="twitter" title="Follow us on Twitter!">
-                            <img src="images/ico_twitter.png" alt="Follow us on Twitter!" />
+                        <img src="<?php echo img('ico_twitter.png') ?>" alt="Follow us on Twitter!" />
                         </a>
                     </li>
                     <li>
                         <a href="http://www.facebook.com/scholarslab" class="twitter" title="Join us on Facebook">
-                            <img src="images/ico_facebook.png" alt="Join us on Facebook" />
+                        <img src="<?php echo img('ico_facebook.png'); ?>" alt="Join us on Facebook" />
                         </a>
                     </li>
                     <li>
                         <a href="http://www.scholarslab.org/feed" title="rss" class="rss">
-                            <img src="images/ico_rss.png" alt="Subscribe to our RSS Feed" />
+                            <img src="<?php echo img('ico_rss.png'); ?>" alt="Subscribe to our RSS Feed" />
                         </a>
                     </li> 
                 </ul>

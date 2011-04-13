@@ -53,17 +53,24 @@
             <div id="topSocial">
                 <ul>
                     <li>
-                        <a href="http://twitter.com/scholarslab" class="twitter" title="Follow us on Twitter!">
+                    <a href="http://twitter.com/<?php echo get_theme_option('Twitter User'); ?>" class="twitter" title="Follow us on Twitter!">
                         <img src="<?php echo img('ico_twitter.png') ?>" alt="Follow us on Twitter!" />
                         </a>
                     </li>
                     <li>
-                        <a href="http://www.facebook.com/scholarslab" class="twitter" title="Join us on Facebook">
+                        <a href="http://www.facebook.com/<?php echo get_theme_option('Facebook User'); ?>" class="twitter" title="Join us on Facebook">
                         <img src="<?php echo img('ico_facebook.png'); ?>" alt="Join us on Facebook" />
                         </a>
                     </li>
                     <li>
-                        <a href="http://www.scholarslab.org/feed" title="rss" class="rss">
+<?php 
+  if(get_theme_option('Feed')) {
+      $feed = get_theme_option('Feed'); 
+} else {
+    $feed = '/omeka/items/browse?output=rss2';
+}
+?>
+                        <a href="<?php echo $feed ?>" title="rss" class="rss">
                             <img src="<?php echo img('ico_rss.png'); ?>" alt="Subscribe to our RSS Feed" />
                         </a>
                     </li> 

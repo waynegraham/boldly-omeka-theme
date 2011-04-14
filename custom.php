@@ -21,6 +21,17 @@ function random_items($num = 3)
   return;
 }
 
+function display_date_added($format = 'F j, Y', $item = null) {
+    if (!$item) {
+        $item = get_current_item();
+    }
+    
+    $dateAdded = item('Date Added', null, null, $item);
+    return date($format, strtotime($dateAdded));   
+}
+
+
+
 /*
  * Local variables:
  * tab-width: 4

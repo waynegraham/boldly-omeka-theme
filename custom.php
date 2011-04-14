@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Returns an appropriately sized image element
+ */
+function item_sized()
+{
+  
+}
+
+
 function random_items($num = 3)
 {
   for($i = 0; $i < $num; $i++) {

@@ -16,9 +16,6 @@
         </div><!-- #tweet -->
       </div><!-- #twitter -->
       
-<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
-<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/<?php echo get_theme_option('Twitter User'); ?>
-.json?callback=twitterCallback2&amp;count=<?php echo get_theme_option('Twitter Count'); ?>"></script>
 
       <div id="quickContact">
         <!-- TODO: contact plugin -->
@@ -57,5 +54,14 @@
     </div><!-- #footerWidgetsInner -->
   </div><!-- #footerWidget -->
 </div><!-- #footer-->
+
+<script>
+  Cufon.replace('h1',{hover: true})('h2',{hover: true})('h3')('.reply',{hover:true})('.more-link');
+</script> 
+<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/<?php echo get_theme_option('Twitter User'); ?>
+.json?callback=twitterCallback2&amp;count=<?php echo get_theme_option('Twitter Count'); ?>"></script>
+
+
 </body>
 </html>

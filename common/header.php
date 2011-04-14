@@ -25,9 +25,8 @@
 
   display_js();
 
-
-?>  
-</head>
+?> 
+   </head>
 <body<?php echo $bodyid ? ' id="'.$bodyid.'"' : ''; ?><?php echo $bodyclass ? ' class="'.$bodyclass.'"' : ''; ?>>
     <div id="mainWrapper">
       <div id="wrapper">

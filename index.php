@@ -40,7 +40,7 @@
         <p><a href="">Link to item</a></p>
     </div>
 
-     <div class="homeBox">
+     <div class="homeBox last">
         <h2>Box 1</h2>
         <p><img class="alignnone" src="" width="274" height="101" /></p>
         <p>text</p>

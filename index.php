@@ -3,10 +3,7 @@
 
 
 ?>
-
-<?php
-    head(array('bodyid' => 'home'));
-?>
+<?php head(array('bodyid' => 'home')); ?>
 <div id="slider">
 
 <?php 

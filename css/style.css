@@ -1,3 +1,11 @@
+/* 
+ * Omeka specific styles
+ */ 
+
+img.full {
+  max-width: 680px;
+}
+
 /*
 Theme Name: Boldy
 Author: Site5.com

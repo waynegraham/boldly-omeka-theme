@@ -4,6 +4,14 @@ head();
 
 ?>
 
+<style>
+
+img.full {
+    max-width: 680px;
+}
+
+</style>
+
 <div id="colLeft">
   <h1><?php echo item('Dublin Core', 'Title'); ?></h1>
 

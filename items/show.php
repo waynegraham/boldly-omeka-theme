@@ -4,14 +4,6 @@ head();
 
 ?>
 
-<style>
-
-img.full {
-    max-width: 680px;
-}
-
-</style>
-
 <div id="colLeft">
   <h1><?php echo item('Dublin Core', 'Title'); ?></h1>
 
@@ -61,9 +53,10 @@ if (function_exists('tei_display_installed')) {
             
         </ul>
 
-    <h2>Citation</h2>
-    <p><?php echo item_citation(); ?></p>
+        <?php echo custom_show_item_metadata(); ?>
 
+        <h2>Citation</h2>
+        <p><?php echo item_citation(); ?></p>
     </div>
 </div>
 

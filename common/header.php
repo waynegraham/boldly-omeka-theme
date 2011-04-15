@@ -44,10 +44,12 @@
                 </ul>
             </div><!-- #mainMenu-->
             <div id="topSearch">
-                <form id="searchForm" action="" method="get">
+                
+<?php echo boldly_search(); ?>
+<!-- <form id="searchForm" action="" method="get">
                     <input id="searchsubmit" type="submit" />
                     <input type="text" id="s" name="q" value="type your search" />
-                </form>
+                </form>-->
             </div><!-- #topSearch-->
             <div id="topSocial">
                 <ul>

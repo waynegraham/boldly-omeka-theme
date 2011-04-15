@@ -36,11 +36,7 @@
             </div>
             <div id="mainMenu" class="ddsmoothmenu">
                 <ul id="menu-topmenu">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="items">Items</a></li>
-                    <li><a href="exhibits">Exhibits</a></li>
-                    <li><a href="plugins">Plugins</a></li>
+                    <?php echo custom_public_nav_header(); ?>
                 </ul>
             </div><!-- #mainMenu-->
             <div id="topSearch">

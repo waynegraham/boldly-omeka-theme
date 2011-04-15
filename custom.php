@@ -2,7 +2,7 @@
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
 /**
- * Overrides the default simple_search
+ * Override the simple search helper 
  *
  * @return string HTML search form
  */
